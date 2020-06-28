@@ -12,8 +12,8 @@ I made this source available because I hate it when plugin makers/modifiers don'
 
 ```shell
 $ sudo apt-get install git
-$ git clone https://github.com/TheFALSEGamer4/AdvancedAdminChat.git
-$ cd AdvancedAdminChat/
+$ git clone https://github.com/TheFALSEGamer4/AdvancedDIYSpy.git
+$ cd AdvancedDIYSpy/
 ```
 > Then once your done editing or just want to compile it, make sure your in the same directory as the pom.xml file and run
 ```shell
@@ -25,8 +25,8 @@ $ mvn install
 
 ```shell
 $ sudo pacman -S git
-$ git clone https://github.com/TheFALSEGamer4/AdvancedAdminChat.git
-$ cd AdvancedAdminChat/
+$ git clone https://github.com/TheFALSEGamer4/AdvancedDIYSpy.git
+$ cd AdvancedDIYSpy/
 ```
 > Then once your done editing or just want to compile it, make sure your in the same directory as the pom.xml file and run
 ```shell
