@@ -1,0 +1,17 @@
+main: com.falsegamer.AdvancedDIYSpy.DIYspyMain
+name: AdvancedDIYspy
+version: 1.0
+author: TheFalsegamer4
+
+commands:
+  commandspy:
+    aliases: [cmdspy, cspy]
+    usage: /cspy
+    description: Toggles Command Spy (Can also do /cspy)
+  socialspy:
+    aliases: [sspy]
+    usage: /sspy
+    description: Toggles Social Spy (Can also do /sspy)
+  spyreload:
+    usage: /spyreload
+    description: Reloads the config file
