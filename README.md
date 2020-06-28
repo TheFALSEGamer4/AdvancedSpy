@@ -1,2 +1,2 @@
 # AdvancedDIYSpy
-Just some improvements on the DIYSpy plugin, 
+Just some improvements on the DIYSpy plugin
