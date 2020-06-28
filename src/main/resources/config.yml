@@ -1,0 +1,53 @@
+#   ===== DIYspy Config File =====   #
+# ===== Developed by nubDotDev ===== #
+DIYSpy:
+  prefix: "&7[&bSPY&7]"
+
+  # Placeholders:
+  #   - %mode% - either 'enabled' or 'disabled'
+  #   - %player% - the player having command or social spy toggled (only applies to 'toggle-others')
+  command-spy-toggle-self: "&aCommand spy has been %mode%!"
+  command-spy-toggle-others: "&aCommand spy has been %mode% for %player%!"
+  social-spy-toggle-self: "&aSocial spy has been %mode%!"
+  social-spy-toggle-others: "&aSocial spy has been %mode% for %player%!"
+  reload-message: "&5Reloaded Config"
+  error-message-color: "&c"
+
+  # How the different spy messages will be formatted.
+  command-spy-format: "&7[&3CMD&7] &2%playerworld% &9%sender%&7: &9%command%"
+  social-spy-format: "&7[&dSOCIAL&7] &5%sender% &7&m&l-&r&7&L> &5%recipient%&7: &5%message%"
+
+  # For any list of commands, do not include the '/'.
+
+  # List of commands that only people with the permission 'spy.cmd.blacklist' can spy on.
+  # Command spy automatically ignores social and reply commands.
+  blacklist:
+    - '/blacklisted-command'
+
+  # The following default lists are based off of Essentials commands.
+
+  # List of commands that social spy picks up on.
+  # The format of these commands must be the following:
+  #   /{command} {recipient} {message}
+  # Don't include reply commands here.
+  social-commands:
+    - 'msg'
+    - 'w'
+    - 'm'
+    - 't'
+    - 'pm'
+    - 'emsg'
+    - 'epm'
+    - 'tell'
+    - 'etell'
+    - 'whisper'
+    - 'ewhisper'
+
+  # List of commands that social spy picks up on but that do not include the name of the recipient.
+  # The format of these commands must be the following:
+  #   /{command} {message}
+  reply-commands:
+    - 'r'
+    - 'er'
+    - 'reply'
+    - 'ereply'
