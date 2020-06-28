@@ -3,7 +3,7 @@ Hunters AdvancedDIYSpy plugin is based off of DIYSpy but with a few improvements
 
 I made this source available because I hate it when plugin makers/modifiers don't publish their source code. 
 
-[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger)
+[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://github.com/TheFALSEGamer4/AdvancedDIYSpy)
 
 ***To clone this repo to your machine, edit it and compile it, follow the instructions below for your system***
 
