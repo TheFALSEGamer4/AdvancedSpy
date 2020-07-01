@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package com.falsegamer.AdvancedDIYSpy.listeners;
 
 import com.falsegamer.AdvancedDIYSpy.DIYspyMain;
@@ -79,11 +74,7 @@ public class CmdListener implements Listener {
     }
 
     private void sendCmdSpyMsgs(Player sender, String message, boolean isBlacklisted) {
-        String pworld= sender.getWorld().toString();
-        int pw1 = pworld.indexOf('=')+1;
-        int pw2 = pworld.indexOf('}');
-        pworld = pworld.substring(pw1, pw2);
-        pworld = pworld.substring(0, 1).toUpperCase() + pworld.substring(1);
+        String pworld= this.plugin.pc.worldParser(sender.getWorld().toString());
         String spy = this.plugin.cm.cmdSpyFormat
                 .replaceAll("%sender%", sender.getName())
                 .replaceAll("%command%", "/" + message)
