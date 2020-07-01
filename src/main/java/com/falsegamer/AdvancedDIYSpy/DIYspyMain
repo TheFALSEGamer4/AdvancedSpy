@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package com.falsegamer.AdvancedDIYSpy;
 
 import com.falsegamer.AdvancedDIYSpy.commands.CmdSpyCmd;
@@ -24,7 +29,6 @@ public class DIYspyMain extends JavaPlugin {
     public CmdSpyCmd csc = new CmdSpyCmd(this);
     public SocialSpyCmd ssc = new SocialSpyCmd(this);
     public ReloadCmd rc = new ReloadCmd(this);
-    public parserClass pc = new parserClass(this);
 
     public DIYspyMain() {
     }
