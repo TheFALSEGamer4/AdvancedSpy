@@ -4,11 +4,9 @@ import com.falsegamer.AdvancedDIYSpy.DIYspyMain;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.file.FileConfiguration;
 
 public class ReloadCmd implements CommandExecutor {
     private DIYspyMain plugin;
-    private FileConfiguration config;
     public ReloadCmd(DIYspyMain plugin) {
         this.plugin = plugin;
     }

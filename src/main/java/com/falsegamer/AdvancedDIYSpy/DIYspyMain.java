@@ -15,7 +15,6 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class DIYspyMain extends JavaPlugin {
-    private ConfigManager configManager;
     public List<UUID> cmdSpy = new ArrayList();
     public List<UUID> socialSpy = new ArrayList();
     public HashMap<UUID, UUID> lastMsg = new HashMap();
@@ -26,8 +25,6 @@ public class DIYspyMain extends JavaPlugin {
     public ReloadCmd rc = new ReloadCmd(this);
     public parserClass pc = new parserClass(this);
 
-    public DIYspyMain() {
-    }
 
     public void onEnable() {
         this.cm.setupConfig();
@@ -35,6 +32,7 @@ public class DIYspyMain extends JavaPlugin {
         console.sendMessage(ChatColor.DARK_GREEN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         console.sendMessage(ChatColor.BLUE + "Advanced DIYSpy");
         console.sendMessage(ChatColor.BLUE + "Version 1.0");
+        console.sendMessage(ChatColor.GREEN + "Enabled Yayaya!");
         console.sendMessage(ChatColor.DARK_GREEN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         this.getServer().getPluginManager().registerEvents(this.cl, this);
         this.getCommand("commandspy").setExecutor(this.csc);
@@ -42,9 +40,6 @@ public class DIYspyMain extends JavaPlugin {
         this.getCommand("spyreload").setExecutor(this.rc);
     }
 
-    public ConfigManager getConfigManager() {
-        return configManager;
-    }
     public void onDisable() {
         ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
         console.sendMessage(ChatColor.DARK_GREEN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
