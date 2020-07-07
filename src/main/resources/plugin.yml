@@ -1,6 +1,6 @@
-main: com.falsegamer.AdvancedDIYSpy.DIYspyMain
-name: AdvancedDIYspy
-version: 1.2
+main: com.falsegamer.AdvancedSpy.spyMain
+name: AdvancedSpy
+version: 1.0
 author: TheFalsegamer4
 
 commands:
