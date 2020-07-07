@@ -1,11 +1,11 @@
-package com.falsegamer.AdvancedDIYSpy.listeners;
+package com.falsegamer.AdvancedSpy.listeners;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class DIYspySocialEvent extends Event implements Cancellable {
+public class spySocialEvent extends Event implements Cancellable {
     private Player sender;
     private Player recipient;
     private String command;
@@ -13,7 +13,7 @@ public class DIYspySocialEvent extends Event implements Cancellable {
     private boolean isCancelled;
     private static final HandlerList HANDLERS = new HandlerList();
 
-    public DIYspySocialEvent(Player sender, Player recipient, String command, String message) {
+    public spySocialEvent(Player sender, Player recipient, String command, String message) {
         this.sender = sender;
         this.recipient = recipient;
         this.command = command;
