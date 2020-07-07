@@ -1,13 +1,13 @@
-package com.falsegamer.AdvancedDIYSpy.commands;
+package com.falsegamer.AdvancedSpy.commands;
 
-import com.falsegamer.AdvancedDIYSpy.DIYspyMain;
+import com.falsegamer.AdvancedSpy.spyMain;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 public class ReloadCmd implements CommandExecutor {
-    private DIYspyMain plugin;
-    public ReloadCmd(DIYspyMain plugin) {
+    private spyMain plugin;
+    public ReloadCmd(spyMain plugin) {
         this.plugin = plugin;
     }
 
