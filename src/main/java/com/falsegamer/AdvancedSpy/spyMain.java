@@ -13,9 +13,14 @@ import java.util.logging.Logger;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class spyMain extends JavaPlugin {
+public class spyMain extends JavaPlugin  implements Listener {
     public List<UUID> cmdSpy = new ArrayList();
     public List<UUID> socialSpy = new ArrayList();
     public HashMap<UUID, UUID> lastMsg = new HashMap();
@@ -26,7 +31,9 @@ public class spyMain extends JavaPlugin {
     public ReloadCmd rc = new ReloadCmd(this);
     public parserClass pc = new parserClass(this);
 
+    public String updateAvailable;
 
+    @Override
     public void onEnable() {
         this.cm.setupConfig();
         ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
@@ -39,15 +46,29 @@ public class spyMain extends JavaPlugin {
         this.getCommand("commandspy").setExecutor(this.csc);
         this.getCommand("socialspy").setExecutor(this.ssc);
         this.getCommand("spyreload").setExecutor(this.rc);
-
         Logger logger = this.getLogger();
+        getServer().getPluginManager().registerEvents(this, this);
         new UpdateChecker(this, 81162).getVersion(version -> {
             if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
                 logger.info("There is not a new update available.");
+                updateAvailable = "false";
             } else {
                 logger.info("There is a new update available.");
+                updateAvailable = "true";
             }
         });
+    }
+
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public void onLogin(PlayerJoinEvent event)
+    {
+
+        Player p = event.getPlayer();
+        if(p.hasPermission("spy.notify")){
+            if(updateAvailable.equals("true")){
+                p.sendMessage(this.cm.message("&2Update found, go download it at https://www.spigotmc.org/resources/advancedspy.81162/"));
+            }
+        }
     }
 
     public void onDisable() {
