@@ -1,6 +1,6 @@
-package com.falsegamer.AdvancedDIYSpy.commands;
+package com.falsegamer.AdvancedSpy.commands;
 
-import com.falsegamer.AdvancedDIYSpy.DIYspyMain;
+import com.falsegamer.AdvancedSpy.spyMain;
 import java.util.UUID;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -9,9 +9,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class CmdSpyCmd implements CommandExecutor {
-    DIYspyMain plugin;
+    spyMain plugin;
 
-    public CmdSpyCmd(DIYspyMain plugin) {
+    public CmdSpyCmd(spyMain plugin) {
         this.plugin = plugin;
     }
 
