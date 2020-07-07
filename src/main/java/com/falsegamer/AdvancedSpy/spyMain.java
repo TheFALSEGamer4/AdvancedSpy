@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
+import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -38,6 +39,15 @@ public class spyMain extends JavaPlugin {
         this.getCommand("commandspy").setExecutor(this.csc);
         this.getCommand("socialspy").setExecutor(this.ssc);
         this.getCommand("spyreload").setExecutor(this.rc);
+
+        Logger logger = this.getLogger();
+        new UpdateChecker(this, 81162).getVersion(version -> {
+            if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
+                logger.info("There is not a new update available.");
+            } else {
+                logger.info("There is a new update available.");
+            }
+        });
     }
 
     public void onDisable() {
