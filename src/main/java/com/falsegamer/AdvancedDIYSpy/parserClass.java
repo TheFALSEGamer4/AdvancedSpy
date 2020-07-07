@@ -1,9 +1,9 @@
-package com.falsegamer.AdvancedDIYSpy;
+package com.falsegamer.AdvancedSpy;
 
 public class parserClass {
-    private final DIYspyMain plugin;
+    private final spyMain plugin;
 
-    public parserClass(DIYspyMain plugin) {
+    public parserClass(spyMain plugin) {
         this.plugin = plugin;
     }
     public String worldParser(String world){
