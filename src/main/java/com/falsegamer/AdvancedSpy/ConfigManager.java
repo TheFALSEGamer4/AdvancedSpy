@@ -19,6 +19,8 @@ public class ConfigManager {
     public String cmdSpyFormat;
     public String socialSpyFormat;
     public String reloadMessage;
+    public String updateAvailableMessage;
+
     public void reload() {
         plugin.saveResource("config.yml", false);
         plugin.reloadConfig();
@@ -46,6 +48,7 @@ public class ConfigManager {
         this.cmdSpyFormat = this.cc(this.config.getString("AdvancedSpy.command-spy-format"));
         this.socialSpyFormat = this.cc(this.config.getString("AdvancedSpy.social-spy-format"));
         this.reloadMessage = this.cc(this.config.getString("AdvancedSpy.reload-message"));
+        this.updateAvailableMessage = this.cc(this.config.getString("AdvancedSpy.UpdateAvailableJoinMessage"));
     }
 
     public String message(String message) {

@@ -4,12 +4,17 @@ AdvancedSpy:
   # Placeholders:
   #   - %mode% - either 'enabled' or 'disabled'
   #   - %player% - the player having command or social spy toggled (only applies to 'toggle-others')
+  #   - %currentversion% - the current plugin version
+  #   - %newversion% - the version available on the spigotmc website
+  #   - %downloadurl% - the download url for this plugin on the spigotmc website
   command-spy-toggle-self: "&aCommand spy has been %mode%!"
   command-spy-toggle-others: "&aCommand spy has been %mode% for %player%!"
   social-spy-toggle-self: "&aSocial spy has been %mode%!"
   social-spy-toggle-others: "&aSocial spy has been %mode% for %player%!"
   reload-message: "&5Reloaded Config"
   error-message-color: "&c"
+  UpdateAvailableJoinMessage: '&2Update available. Current Version: &2&l[&2%currentversion%&2&l]&2. New Version: &2&l[&2%newversion%&2&l]&2. Download at: %downloadurl%'
+
 
   # How the different spy messages will be formatted.
   command-spy-format: "&7[&3CMD&7] &2%playerworld% &9%sender%&7: &9%command%"
