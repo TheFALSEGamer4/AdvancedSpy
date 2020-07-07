@@ -13,5 +13,4 @@ commands:
     usage: /sspy
     description: Toggles Social Spy (Can also do /sspy)
   spyreload:
-    usage: /spyreload
     description: Reloads the config file
