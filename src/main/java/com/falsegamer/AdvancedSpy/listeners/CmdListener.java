@@ -1,6 +1,6 @@
-package com.falsegamer.AdvancedDIYSpy.listeners;
+package com.falsegamer.AdvancedSpy.listeners;
 
-import com.falsegamer.AdvancedDIYSpy.DIYspyMain;
+import com.falsegamer.AdvancedSpy.spyMain;
 import java.util.Iterator;
 import java.util.UUID;
 import org.bukkit.Bukkit;
@@ -10,9 +10,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 
 public class CmdListener implements Listener {
-    DIYspyMain plugin;
+    spyMain plugin;
 
-    public CmdListener(DIYspyMain plugin) {
+    public CmdListener(spyMain plugin) {
         this.plugin = plugin;
     }
 
@@ -36,13 +36,13 @@ public class CmdListener implements Listener {
                     }
                 }
 
-                DIYspySocialEvent e1;
+                spySocialEvent e1;
                 Player recipient;
                 if (this.plugin.cm.replyCmds.contains(cmd)) {
                     if (args.length >= 2) {
                         recipient = Bukkit.getPlayer((UUID)this.plugin.lastMsg.get(p.getUniqueId()));
                         if (Bukkit.getOnlinePlayers().contains(recipient)) {
-                            e1 = new DIYspySocialEvent(p, recipient, cmd, replyMsg);
+                            e1 = new spySocialEvent(p, recipient, cmd, replyMsg);
                             Bukkit.getPluginManager().callEvent(e1);
                             if (e1.isCancelled()) {
                                 e.setCancelled(true);
@@ -57,7 +57,7 @@ public class CmdListener implements Listener {
                     if (args.length >= 3) {
                         recipient = Bukkit.getPlayerExact(args[1]);
                         if (recipient != null) {
-                            e1 = new DIYspySocialEvent(p, recipient, cmd, msg);
+                            e1 = new spySocialEvent(p, recipient, cmd, msg);
                             Bukkit.getPluginManager().callEvent(e1);
                             e.setCancelled(e1.isCancelled());
                             e.setPlayer(e1.getSender());
