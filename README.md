@@ -1,9 +1,9 @@
-# AdvancedDIYSpy
-Hunters AdvancedDIYSpy plugin is based off of DIYSpy but with a few improvements
+# AdvancedSpy
+Hunters AdvancedSpy plugin is based off of DIYSpy but with a few improvements
 
 I made this source available because I hate it when plugin makers/modifiers don't publish their source code. 
 
-[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://github.com/TheFALSEGamer4/AdvancedDIYSpy)
+[![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://github.com/TheFALSEGamer4/AdvancedSpy)
 
 ***To clone this repo to your machine, edit it and compile it, follow the instructions below for your system***
 
@@ -12,8 +12,8 @@ I made this source available because I hate it when plugin makers/modifiers don'
 
 ```shell
 $ sudo apt-get install git
-$ git clone https://github.com/TheFALSEGamer4/AdvancedDIYSpy.git
-$ cd AdvancedDIYSpy/
+$ git clone https://github.com/TheFALSEGamer4/AdvancedSpy.git
+$ cd AdvancedSpy/
 ```
 > Then once your done editing or just want to compile it, make sure your in the same directory as the pom.xml file and run
 ```shell
@@ -25,8 +25,8 @@ $ mvn install
 
 ```shell
 $ sudo pacman -S git
-$ git clone https://github.com/TheFALSEGamer4/AdvancedDIYSpy.git
-$ cd AdvancedDIYSpy/
+$ git clone https://github.com/TheFALSEGamer4/AdvancedSpy.git
+$ cd AdvancedSpy/
 ```
 > Then once your done editing or just want to compile it, make sure your in the same directory as the pom.xml file and run
 ```shell
