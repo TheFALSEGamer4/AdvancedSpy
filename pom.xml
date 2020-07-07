@@ -3,13 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.falsegamer</groupId>
-    <artifactId>AdvancedDIYSpy</artifactId>
-    <version>1.2</version>
+    <artifactId>AdvancedSpy</artifactId>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>AdvancedDIYSpy</name>
+    <name>AdvancedSpy</name>
 
-    <inceptionYear>2015</inceptionYear>
+    <inceptionYear>2020</inceptionYear>
 
     <scm>
         <connection>scm:git:https://github.com/TealCube/bukkit-plugin-archetype.git</connection>
