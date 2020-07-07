@@ -1,9 +1,9 @@
-package com.falsegamer.AdvancedDIYSpy;
+package com.falsegamer.AdvancedSpy;
 
-import com.falsegamer.AdvancedDIYSpy.commands.CmdSpyCmd;
-import com.falsegamer.AdvancedDIYSpy.commands.ReloadCmd;
-import com.falsegamer.AdvancedDIYSpy.commands.SocialSpyCmd;
-import com.falsegamer.AdvancedDIYSpy.listeners.CmdListener;
+import com.falsegamer.AdvancedSpy.commands.CmdSpyCmd;
+import com.falsegamer.AdvancedSpy.commands.ReloadCmd;
+import com.falsegamer.AdvancedSpy.commands.SocialSpyCmd;
+import com.falsegamer.AdvancedSpy.listeners.CmdListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +14,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class DIYspyMain extends JavaPlugin {
+public class spyMain extends JavaPlugin {
     public List<UUID> cmdSpy = new ArrayList();
     public List<UUID> socialSpy = new ArrayList();
     public HashMap<UUID, UUID> lastMsg = new HashMap();
@@ -30,7 +30,7 @@ public class DIYspyMain extends JavaPlugin {
         this.cm.setupConfig();
         ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
         console.sendMessage(ChatColor.DARK_GREEN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        console.sendMessage(ChatColor.BLUE + "Advanced DIYSpy");
+        console.sendMessage(ChatColor.BLUE + "AdvancedSpy");
         console.sendMessage(ChatColor.BLUE + "Version 1.0");
         console.sendMessage(ChatColor.GREEN + "Enabled Yayaya!");
         console.sendMessage(ChatColor.DARK_GREEN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -43,7 +43,7 @@ public class DIYspyMain extends JavaPlugin {
     public void onDisable() {
         ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
         console.sendMessage(ChatColor.DARK_GREEN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        console.sendMessage(ChatColor.BLUE + "Advanced DIYSpy");
+        console.sendMessage(ChatColor.BLUE + "AdvancedSpy");
         console.sendMessage(ChatColor.BLUE + "Version 1.0");
         console.sendMessage(ChatColor.RED + "Disabled!");
         console.sendMessage(ChatColor.DARK_GREEN + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
